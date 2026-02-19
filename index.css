@@ -1,0 +1,184 @@
+/* Add a custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0F172A;
+}
+::-webkit-scrollbar-thumb {
+    background: #38BDF8;
+    border-radius: 5px;
+}
+
+/* Add a subtle gradient background to sections */
+section {
+    background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+}
+
+/* Improve Typography */
+h2 {
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background: #38BDF8;
+    border-radius: 2px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0F172A;
+}
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(15, 23, 42, 0.95); /* Matches Section Background */
+    display: flex;
+    padding: 10px 0;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Adds a modern frosted glass effect */
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #38BDF8; /* Blue brand color */
+    margin-left: 80px;
+}
+
+ul {
+    display: flex;
+    gap: 40px;
+    padding-right: 80px;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #F1F5F9; /* White text for header */
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    color: #38BDF8;
+}
+
+/* Common Section Styles */
+section {
+    padding: 120px 80px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #38BDF8;
+}
+
+/* About Section */
+.about-section {
+    background-color: #0F172A;
+    min-height: 60vh;
+}
+
+.about-section p {
+    font-size: 22px;
+    line-height: 1.8;
+    color: #94A3B8;
+    max-width: 900px;
+}
+
+/* Skills & Projects Grid */
+.skills-section, .contact-section {
+    background-color: #1E293B;
+}
+
+.projects-section {
+    background-color: #0F172A;
+}
+
+.skills-container, .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.skill-box, .project-box {
+    background-color: #0F172A;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+}
+
+/* Unified Hover Effect */
+.skill-box:hover, .project-box:hover {
+    transform: translateY(-10px);
+    border-color: #38BDF8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.skill-box h3, .project-box h3 {
+    color: #38BDF8;
+    margin-bottom: 15px;
+}
+
+.skill-box p, .project-box p {
+    color: #94A3B8;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Simplified Contact Section */
+.contact-card {
+    background-color: #0F172A;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+    border-color: #38BDF8;
+}
+
+.contact-card p {
+    font-size: 18px;
+    color: #F1F5F9;
+    margin-bottom: 20px;
+}
+
+.contact-card a {
+    color: #38BDF8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
